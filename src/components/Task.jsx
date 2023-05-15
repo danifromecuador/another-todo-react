@@ -1,6 +1,6 @@
-const Task = () => (
+const Task = ({id, task}) => (
     <div>
-      task 1
+      {id} , {task}
     </div>
 );
 
