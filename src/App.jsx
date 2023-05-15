@@ -2,17 +2,16 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from 'react';
 import Navbar from './components/Navbar';
 import TasksPage from './pages/TasksPage'
-import Pomodore from './pages/Pomodore';
+import PomodorePage from './pages/PomodorePage';
 
 
 const App = () => {
-  console.log(TasksPage);
   return (
     <BrowserRouter>
-      <Navbar />      
+      <Navbar />
       <Routes>
         <Route path="/" element={<TasksPage />} />
-        <Route path="pomodore" element={<Pomodore />} />
+        <Route path="pomodore" element={<PomodorePage />} />
       </Routes>
     </BrowserRouter>
   );
