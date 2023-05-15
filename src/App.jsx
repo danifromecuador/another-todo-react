@@ -1,20 +1,21 @@
-import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from 'react';
 import Navbar from './components/Navbar';
 import TasksPage from './pages/TasksPage'
 import Pomodore from './pages/Pomodore';
 
 
-const App = () => (
-  <div className="App">
-    <Router>
-      <Navbar />
-      <Switch>
-        <Route exact path="/" component={TasksPage} />
-        <Route path="/pomodore" component={Pomodore} />
-      </Switch>
-    </Router>
-  </div>
-);
+const App = () => {
+  console.log(TasksPage);
+  return (
+    <BrowserRouter>
+      <Navbar />      
+      <Routes>
+        <Route path="/" element={<TasksPage />} />
+        <Route path="pomodore" element={<Pomodore />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
 export default App;
